@@ -4,78 +4,86 @@
 Name: Abhi Pandey
 Project: ERPNext
 
-🧠 One-line Description
+🧠 One-Line Description
 
-I am building a simple CLI tool that scans ERPNext code files and helps me understand what the code is doing by showing structured output and answering basic questions.
+A simple command-line tool that scans ERPNext Python code and helps beginners understand the code by showing structured information like functions and imports.
 
 🎯 Purpose of This Project
 
-ERPNext is a very large project.
-For new developers, it is hard to understand the code by reading every file.
+ERPNext is a very large and complex project.
+For new developers, it is difficult to understand how the code works by reading files one by one.
 
-This tool helps by:
+This tool helps beginners by:
 
-Scanning Python files
+Automatically scanning Python files
 
-Extracting useful information
+Extracting important details from the code
 
-Showing structured output in a simple way
+Presenting the output in a clean and structured format
 
 🛠️ What This Tool Does
 
 Scans a given folder for Python (.py) files
 
-Finds:
+Extracts:
 
 File names
 
-Functions
+Function names
 
 Import statements
 
-Saves the result in a JSON file
+Saves all results in a JSON file
 
-Displays a short summary in the terminal
+Prints a summary in the terminal for quick understanding
 
 📁 Project Structure
 code-analyzer/
-├── analyzer.py     # Main CLI file
-├── scanner.py      # Scans files and extracts code info
+├── analyzer.py     # Main CLI entry point
+├── scanner.py      # Logic for scanning files and extracting data
 └── output/
     └── summary.json
 
 ▶️ How to Run the Tool
 
-Open terminal / command prompt
+Open Terminal / Command Prompt
 
-Go to the project folder
+Navigate to the project directory
 
-Run the command:
+Run the following command:
 
 python analyzer.py .
 
 
-(The dot . means current folder)
+. means the current folder will be scanned.
 
 📤 Output
-Terminal Output
+✅ Terminal Output
 
-Shows:
+Displays:
 
-Number of files scanned
+Total number of Python files scanned
 
-Number of functions found
+Total number of functions found
 
-Number of imports found
+Total number of import statements found
 
-JSON Output
+Example:
+
+Scanning files...
+Files scanned: 2
+Functions found: 3
+Imports found: 6
+JSON output saved to output/summary.json
+
+📄 JSON Output
 
 Saved at:
 
 output/summary.json
 
 
-Example:
+Example content:
 
 {
   "file": "scanner.py",
@@ -85,20 +93,20 @@ Example:
 
 📚 What I Learned
 
-How to scan folders using Python
+How to scan folders and files using Python
 
-How to read and analyze Python code files
+How to analyze Python code programmatically
 
-How to extract structured information from code
+How to extract structured data from source code
 
-How to build a basic CLI tool
+How to build a basic CLI tool for real projects
 
 🚀 Future Improvements
 
-Add simple question answering like:
+Add basic question answering like:
 
-“Where is this function used?”
+“Which file contains this function?”
 
-Support for large ERPNext folders
+Improve support for very large ERPNext codebases
 
-Better summaries and diagrams
+Add diagrams and better summaries for easier understanding
