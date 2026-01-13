@@ -1,98 +1,91 @@
 📘 ERPNext Code Analyzer (CLI Tool)
 Author: Abhi Pandey
 
-Project: ERPNext Utility
+Project: ERPNext Developer Experience
 
-🧠 Overview
-ERPNext is a massive, enterprise-grade codebase. For new developers, navigating thousands of files to understand logic flow can be overwhelming.
+🧠 One-Line Description
+A simple command-line tool that scans ERPNext Python code and helps beginners understand the codebase by displaying structured information like functions and imports.
 
-ERPNext Code Analyzer is a lightweight command-line interface (CLI) tool designed to help beginners deconstruct Python files. It identifies the "what" and "where" of the code without requiring the developer to read every line manually.
+🎯 Purpose of This Project
+ERPNext is a very large and complex project. For new developers, it is difficult to understand how the code works by reading files one by one.
 
-🎯 Purpose
-Simplify Onboarding: Helps new developers map out the structure of ERPNext modules.
+This tool helps beginners by:
 
-Automated Scanning: Removes the manual effort of searching for function definitions.
+Automatically scanning Python files.
 
-Structured Insights: Converts raw code into readable JSON data for further analysis or documentation.
+Extracting important details directly from the source code.
 
-🛠️ Key Features
-Recursive Scanning: Walks through directories to find all .py files.
+Presenting the output in a clean, structured, and easy-to-read format.
 
-AST Analysis: Uses Python's Abstract Syntax Tree (AST) to accurately identify:
+🛠️ What This Tool Does
+Scans any given folder for Python (.py) files.
 
-Function Names: Every logic block defined in the file.
+Extracts vital metadata:
 
-Import Statements: External dependencies and internal module links.
+File names
 
-Dual Output: * Terminal Summary: Quick stats for immediate feedback.
+Function names (logic blocks)
 
-JSON Export: A persistent data file for deep dives.
+Import statements (dependencies)
+
+Saves all results into a structured summary.json file.
+
+Prints a high-level summary in the terminal for quick reference.
 
 📁 Project Structure
 Plaintext
 
+
 code-analyzer/
-├── analyzer.py     # Main CLI entry point (handles user input)
-├── scanner.py      # Core logic (AST parsing and file traversal)
+├── analyzer.py      # Main CLI entry point
+├── scanner.py       # Logic for scanning files and extracting data
 └── output/
-    └── summary.json # Generated results
-▶️ Getting Started
-1. Installation
-Ensure you have Python 3.x installed. Clone this repository to your local machine:
+    └── summary.json # Structured scan results
+▶️ How to Run the Tool
+Open Terminal or Command Prompt.
+
+Navigate to the project directory.
+
+Run the following command:
 
 Bash
 
-git clone https://github.com/your-username/erpnext-code-analyzer.git
-cd erpnext-code-analyzer
-2. Usage
-Run the analyzer by pointing it to any ERPNext app or specific folder:
+python analyzer.py .
+(The . means the current folder and all subfolders will be scanned.)
 
-Bash
-
-python analyzer.py /path/to/erpnext/module
-Note: Use . to scan the current directory.
-
-📤 Output Examples
+📤 Output
 ✅ Terminal Output
+The terminal provides an immediate snapshot of the codebase:
+
 Plaintext
 
 Scanning files...
----------------------------------------
-Files scanned  : 12
-Functions found: 45
-Imports found  : 112
----------------------------------------
-✅ Success! JSON output saved to output/summary.json
-📄 JSON Output (summary.json)
+Files scanned: 2
+Functions found: 3
+Imports found: 6
+JSON output saved to output/summary.json
+📄 JSON Output
+Results are stored in output/summary.json for deep analysis:
+
 JSON
 
 {
-  "file": "controllers/sales_order.py",
-  "functions": [
-    "make_sales_invoice",
-    "on_submit",
-    "validate_warehouse"
-  ],
-  "imports": [
-    "frappe",
-    "frappe.model.document",
-    "erpnext.controllers.selling_controller"
-  ]
+  "file": "scanner.py",
+  "functions": ["scan_folder", "scan_python_file"],
+  "imports": ["os", "ast"]
 }
-📚 Technical Learnings
-During the development of this tool, I explored:
+📚 What I Learned
+File System Navigation: How to programmatically scan folders and files using Python.
 
-File I/O: Navigating complex directory trees using the os and pathlib libraries.
+Static Code Analysis: Using Python libraries to "read" and understand code without running it.
 
-Static Analysis: Using the ast module to inspect code without executing it.
+Data Serialization: Organizing raw source code data into structured JSON format.
 
-Data Serialization: Structuring Python objects into clean, portable JSON.
+CLI Development: Building a functional command-line utility for real-world developer workflows.
 
-CLI Design: Creating a user-friendly experience in the terminal.
+🚀 Future Improvements
+Direct Search: Add a feature to answer: “Which file contains this function?”
 
-🚀 Future Roadmap
-[ ] Search Functionality: "Which file contains the function get_query?"
+Scalability: Improve performance for massive ERPNext codebases with thousands of files.
 
-[ ] Dependency Graphing: Visualize how different ERPNext files import one another.
-
-[ ] Docstring Extraction: Include function descriptions in the summary.
+Visual Documentation: Generate flowcharts or diagrams automatically for better understanding.
