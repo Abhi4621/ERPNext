@@ -1,0 +1,25 @@
+[
+    {
+        "file": ".\\analyzer.py",
+        "functions": [
+            "main"
+        ],
+        "imports": [
+            "sys",
+            "json",
+            "os",
+            "scanner"
+        ]
+    },
+    {
+        "file": ".\\scanner.py",
+        "functions": [
+            "scan_python_file",
+            "scan_folder"
+        ],
+        "imports": [
+            "os",
+            "ast"
+        ]
+    }
+]
