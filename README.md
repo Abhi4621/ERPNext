@@ -29,16 +29,12 @@ This tool helps beginners by:
 - Saves all results into a structured `summary.json` file  
 - Prints a high-level summary in the terminal for quick reference  
 
----
+| Path                  | Description                                       |
+| --------------------- | ------------------------------------------------- |
+| `analyzer.py`         | Main CLI file that starts the tool                |
+| `scanner.py`          | Scans Python files and extracts functions/imports |
+| `output/summary.json` | Stores structured scan results                    |
 
-## 📁 Project Structure
-code-analyzer/
-├── analyzer.py # Main CLI entry point
-├── scanner.py # Logic for scanning files and extracting data
-└── output/
-└── summary.json # Structured scan results
-
----
 
 ## ▶️ How to Run the Tool
 1. Open Terminal or Command Prompt  
