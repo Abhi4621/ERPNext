@@ -1,25 +1,67 @@
 [
-    {
-        "file": ".\\analyzer.py",
-        "functions": [
-            "main"
-        ],
-        "imports": [
-            "sys",
-            "json",
-            "os",
-            "scanner"
-        ]
-    },
-    {
-        "file": ".\\scanner.py",
-        "functions": [
-            "scan_python_file",
-            "scan_folder"
-        ],
-        "imports": [
-            "os",
-            "ast"
-        ]
-    }
+  {
+    "file": "ai_engine.py",
+    "functions": [
+      "ask_llm"
+    ],
+    "imports": [
+      "os",
+      "requests",
+      "dotenv"
+    ]
+  },
+  {
+    "file": "analyzer.py",
+    "functions": [
+      "compare_approaches",
+      "main"
+    ],
+    "imports": [
+      "sys",
+      "json",
+      "os",
+      "time",
+      "scanner",
+      "ai_engine",
+      "experiment_tracker"
+    ]
+  },
+  {
+    "file": "dashboard.py",
+    "functions": [],
+    "imports": []
+  },
+  {
+    "file": "experiment_tracker.py",
+    "functions": [
+      "log_experiment"
+    ],
+    "imports": [
+      "json",
+      "datetime",
+      "os"
+    ]
+  },
+  {
+    "file": "report_generator.py",
+    "functions": [
+      "generate_trend_report"
+    ],
+    "imports": [
+      "json",
+      "os"
+    ]
+  },
+  {
+    "file": "scanner.py",
+    "functions": [
+      "scan_python_file",
+      "scan_folder",
+      "get_context_with_metrics"
+    ],
+    "imports": [
+      "os",
+      "ast"
+    ]
+  }
 ]

@@ -1,0 +1,12 @@
+# experiment.yaml
+id: "exp-001"
+date: "2026-01-15"
+hypothesis: "bge-large embeddings will improve retrieval for workflow queries"
+parameters:
+  embedding_model: "bge-large-v1.5"
+  chunk_size: 1500
+results:
+  precision: 0.82
+  recall: 0.78
+  avg_accuracy: 0.85
+notes: "Significantly better for workflow queries than the previous baseline."
