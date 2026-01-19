@@ -27,6 +27,18 @@
     ]
   },
   {
+    "file": "app.py",
+    "functions": [],
+    "imports": [
+      "streamlit",
+      "time",
+      "os",
+      "scanner",
+      "ai_engine",
+      "experiment_tracker"
+    ]
+  },
+  {
     "file": "dashboard.py",
     "functions": [],
     "imports": []
@@ -62,6 +74,27 @@
     "imports": [
       "os",
       "ast"
+    ]
+  },
+  {
+    "file": "erpnext-ai-assistant\\node_modules\\flatted\\python\\flatted.py",
+    "functions": [
+      "_array_keys",
+      "_object_keys",
+      "_is_array",
+      "_is_object",
+      "_is_string",
+      "_index",
+      "_loop",
+      "_ref",
+      "_relate",
+      "_transform",
+      "_wrap",
+      "parse",
+      "stringify"
+    ],
+    "imports": [
+      "json"
     ]
   }
 ]

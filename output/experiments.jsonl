@@ -1,1 +1,1 @@
-{"date": "2026-01-15 10:46:17.442089", "exp_id": "exp-001", "hypothesis": "Full System Latency", "query": "scan", "metrics": {"precision": 0.1667, "latency_ms": 8.18}}
+{"date": "2026-01-19 15:05:18.748653", "exp_id": "exp-001", "hypothesis": "Full System Latency", "query": "scan", "metrics": {"precision": 0.125, "latency_ms": 479.85}}
